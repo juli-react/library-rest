@@ -12,7 +12,7 @@ export function AuthorsListComponent() {
 
     useEffect(() => {
         loadAuthors();
-    }, [authors]);
+    }, []);
 
     const loadAuthors = async () => {
         try {
@@ -28,9 +28,10 @@ export function AuthorsListComponent() {
     if (loading) {
         return <div>Loading...</div>;
     }
-    function deleteAuthor(id?: number) {
+    async function deleteAuthor(id?: number) {
         // TODO
         if (id) {
+            await authorService.deleteAuthor(id)
             setAuthors((currentList) => {
                 return currentList.filter((a) => a.id !== id);
             });
