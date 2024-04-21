@@ -15,12 +15,31 @@ body {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  width: 100%;
+  border-top: 1px solid gray;
+  padding: 12px 0;
 }
 
 .form-row {
   display: flex;
   flex-direction: column;
-  gap: 0.1rem;
+  gap: 8px;
+}
+
+.form-row label {
+  font-size: 18px;
+  font-weight: 400;
+}
+
+.new-item-form .actions {
+  display: flex;
+  justify-items: center;
+  gap: 24px;
+  width: 100%;
+  padding: 0 16px;
+}
+.new-item-form .actions button {
+  width: 100%;
 }
 
 .btn {
@@ -112,7 +131,7 @@ body {
 }
 
 .list li label::before {
-  content: "";
+  content: '';
   display: block;
   width: 0.9rem;
   height: 0.9rem;
@@ -128,7 +147,7 @@ body {
 }
 
 .list li:has(input:checked) label::before {
-  content: "✔";
+  content: '✔';
   background: hsl(200, 100%, 40%);
   color: hsl(200, 100%, 90%);
   font-size: 0.75rem;
@@ -137,4 +156,28 @@ body {
 
 .list li:has(input:checked) label:hover::before {
   background: hsl(200, 100%, 30%);
+}
+
+.wrap-form {
+  display: flex;
+  justify-content: end;
+  padding: 15px;
+}
+
+/* list item */
+.item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.title {
+  width: 100%;
+  text-align: left;
+}
+
+.btn-wrap {
+  display: flex;
+  gap: 8px;
+  align-items: center;
 }
