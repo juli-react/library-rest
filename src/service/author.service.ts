@@ -3,7 +3,7 @@ import axios from "axios";
 
 class AuthorService {
     // TODO get this from evn variables
-    private API_URL = 'http://localhost:8081/v1/api/authors';
+    private API_URL = `${process.env.REACT_APP_URL}/v1/api/authors`;
 
     async getAllAuthors(): Promise<Author[]> {
         try {
