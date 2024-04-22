@@ -63,6 +63,10 @@ export function AuthorsListComponent() {
             }
         }
     }
+    function showAddNewForm() {
+        setItemToUpdate({name:""});
+        setShowForm(true);
+    }
 
     return (
         <div>
@@ -75,7 +79,7 @@ export function AuthorsListComponent() {
                         onClose={() => setShowForm(false)}
                     />
                 ) : (
-                    <button className='btn' onClick={() => setShowForm(true)}>
+                    <button className='btn' onClick={() => showAddNewForm()}>
                         {' '}
                         Add author
                     </button>
