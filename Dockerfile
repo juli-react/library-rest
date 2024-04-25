@@ -4,8 +4,8 @@ COPY package*.json .
 COPY yarn*.lock .
 RUN yarn install
 
-ARG REACT_APP_URL="http://localhost:8081"
-ENV REACT_APP_URL=$REACT_APP_URL
+ARG REACT_APP_API_URL="http://api-service:8081"
+ENV REACT_APP_API_URL=$REACT_APP_API_URL
 
 COPY . .
 RUN yarn build
